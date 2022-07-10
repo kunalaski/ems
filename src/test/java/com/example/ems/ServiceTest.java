@@ -32,7 +32,7 @@ public class ServiceTest {
         employeeService.save(employee);
 
         Iterable<Employee> friends = employeeService.findAll();
-        Assertions.assertThat(friends).extracting(Employee::getEmpName).containsOnly("Test");
+        Assertions.assertThat(friends).extracting(Employee::getEmpName).containsOnly("Testy");
 
         employeeService.deleteAll();
         Assertions.assertThat(employeeService.findAll()).isEmpty();
